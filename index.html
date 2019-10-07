@@ -4,16 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- CSS -->
     <link rel="stylesheet" href="styling.css" />
+
     <title>Team ITG - Landing page test</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      document.getElementById("myinput").oninput = function() {
+        this.style.background =
+          "linear-gradient(to right, #82CFD0 0%, #82CFD0 " +
+          this.value +
+          "%, #fff " +
+          this.value +
+          "%, white 100%)";
+      };
+    </script>
   </head>
   <body>
     <nav>
-      <img src="" alt="Team ITG Logo" />
+      <!-- Logo -->
+      <img src="./images/logo_itg_1.png" alt="Team ITG Logo" />
     </nav>
     <section>
-      <!-- Logo -->
-      <img src="" alt="" />
+      <!-- Header -->
+      <div class="header-img">
+        <img src="./images/hero_image.png" alt="" />
+        <h1>Hello [Name]</h1>
+      </div>
 
       <!-- Start of the form -->
       <form action="">
@@ -43,7 +66,7 @@
             semper massa?
           </li>
           <label>
-            <input type="input" name="input" id="" />
+            <input type="input" name="input" id="text-input" />
           </label>
 
           <!-- Third Question -->
@@ -77,15 +100,35 @@
             Suspendisse finibus condimentum est luctus at?
           </li>
           <label>
-            <input type="range" name="" id="" />
+            <input
+              type="range"
+              name=""
+              id="myinput"
+              min="0"
+              max="10"
+              value="5"
+            />
           </label>
+          <datalist id="tickmarks">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </datalist>
         </ol>
         <button type="submit">Submit</button>
       </form>
     </section>
     <footer>
-      <p></p>
-      <img src="" alt="Team ITG Logo" />
+      <p>© 2019 Inspired Thinking Group (ITG) Limited</p>
+      <img src="./images/logo_itg_2.png" alt="Team ITG Logo" />
     </footer>
   </body>
 </html>
