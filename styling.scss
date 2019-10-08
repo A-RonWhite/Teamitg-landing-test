@@ -69,8 +69,7 @@ nav {
 }
 
 form {
-  padding: 0 $container-padding;
-  padding-bottom: 4rem;
+  padding: 0 $container-padding 4rem $container-padding;
   datalist {
     display: flex;
     width: 100%;
@@ -173,6 +172,7 @@ form {
     height: 6rem;
     width: 100%;
     border-radius: 5px;
+    border: solid 1px #565c60;
   }
 }
 
@@ -212,13 +212,13 @@ footer {
   }
   nav {
     img {
-      padding-left: 1rem;
+      padding-left: 2rem;
     }
   }
   h1 {
     font-size: 3rem;
   }
   form {
-    padding: 0 2rem;
+    padding: 0 2rem 2rem 2rem;
   }
 }

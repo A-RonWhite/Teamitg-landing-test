@@ -70,8 +70,7 @@ nav img {
 }
 
 form {
-  padding: 0 14rem;
-  padding-bottom: 4rem;
+  padding: 0 14rem 4rem 14rem;
 }
 
 form datalist {
@@ -198,6 +197,7 @@ form #text-input {
   height: 6rem;
   width: 100%;
   border-radius: 5px;
+  border: solid 1px #565c60;
 }
 
 footer {
@@ -240,13 +240,13 @@ footer img {
     margin: 2rem;
   }
   nav img {
-    padding-left: 1rem;
+    padding-left: 2rem;
   }
   h1 {
     font-size: 3rem;
   }
   form {
-    padding: 0 2rem;
+    padding: 0 2rem 2rem 2rem;
   }
 }
 /*# sourceMappingURL=styling.css.map */
