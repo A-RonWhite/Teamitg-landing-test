@@ -23,7 +23,10 @@
     <section>
       <!-- Header -->
       <div class="header-img">
-        <img src="./images/hero_image.png" alt="An image of moving lights on a long exposure with colours of orange and light grey at night" />
+        <img
+          src="./images/hero_image.png"
+          alt="An image of moving lights on a long exposure with colours of orange and light grey at night"
+        />
         <h1>Hello [Name]</h1>
       </div>
 
@@ -98,7 +101,23 @@
               value="5"
             />
           </label>
-          <datalist>
+          <ul id="range-numbers">
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+          </ul>
+          <!--           
+            Isn't support on Safari 
+
+            <datalist>
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -110,7 +129,7 @@
             <option value="8">8</option>
             <option value="9">9</option>
             <option value="10">10</option>
-          </datalist>
+          </datalist> -->
           <div id="range-option-value">
             <p>
               Not <br />
@@ -132,7 +151,7 @@
   </body>
 
   <script>
-      /* Script to change the colour of the slider as you move it */
+    /* Script to change the colour of the slider as you move it */
     const slider = document.getElementById("myinput");
     slider.oninput = function() {
       this.style.background = `linear-gradient(

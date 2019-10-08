@@ -73,20 +73,6 @@ form {
   padding: 0 14rem 4rem 14rem;
 }
 
-form datalist {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-form datalist option {
-  padding-left: 7px;
-}
-
 form #range-option-value {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -183,6 +169,10 @@ form label #myinput {
   -webkit-appearance: none;
 }
 
+form label #myinput:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
 form label #myinput::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 27px;
@@ -198,6 +188,28 @@ form #text-input {
   width: 100%;
   border-radius: 5px;
   border: solid 1px #565c60;
+}
+
+form #range-numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+form #range-numbers li {
+  margin: 0;
+  padding: 0;
+  padding-left: 7px;
+  padding-top: 0.5rem;
+  font-size: 1.7rem;
+  font-family: "Roboto", sans-serif;
+  color: #565c60;
 }
 
 footer {

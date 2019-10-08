@@ -70,14 +70,6 @@ nav {
 
 form {
   padding: 0 $container-padding 4rem $container-padding;
-  datalist {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    option {
-      padding-left: 7px;
-    }
-  }
   #range-option-value {
     display: flex;
     width: 100%;
@@ -150,13 +142,15 @@ form {
         #c1b9b1 50%,
         #c1b9b1 100%
       );
-
       border-radius: 8px;
       height: 11px;
       width: 100%;
       outline: none;
       transition: background 450ms ease-in;
       -webkit-appearance: none;
+      &:focus {
+        outline: 5px auto -webkit-focus-ring-color;
+      }
       &::-webkit-slider-thumb {
         -webkit-appearance: none;
         width: 27px;
@@ -173,6 +167,22 @@ form {
     width: 100%;
     border-radius: 5px;
     border: solid 1px #565c60;
+  }
+  #range-numbers {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    li {
+      margin: 0;
+      padding: 0;
+      padding-left: 7px;
+      padding-top: 0.5rem;
+      font-size: 1.7rem;
+      font-family: "Roboto", sans-serif;
+      color: $text-color;
+    }
   }
 }
 
