@@ -158,7 +158,14 @@ form {
         border-radius: 50%;
         background: #565c60;
         border: 0;
-        z-index: 10 !important;
+      }
+      &::-moz-range-thumb {
+        -moz-appearance: none;
+        width: 27px;
+        height: 27px;
+        border-radius: 50%;
+        background: #565c60;
+        border: 0;
       }
     }
   }
@@ -189,6 +196,8 @@ form {
 footer {
   background-color: $text-color;
   display: flex;
+  justify-content: center;
+  align-items: center;
   justify-content: flex-end;
   padding: 0 $container-padding;
   padding-top: 6rem;
