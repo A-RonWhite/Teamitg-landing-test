@@ -105,6 +105,12 @@ form button {
   display: block;
   margin: 0 auto;
   color: white;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+form button:hover {
+  background: #f5ad50;
 }
 
 form li {
@@ -180,6 +186,12 @@ form label #myinput::-webkit-slider-thumb {
   border-radius: 50%;
   background: #565c60;
   border: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+form label #myinput::-webkit-slider-thumb:hover {
+  background: #797c7e;
 }
 
 form label #myinput::-moz-range-thumb {

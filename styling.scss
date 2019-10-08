@@ -94,6 +94,10 @@ form {
     display: block;
     margin: 0 auto;
     color: white;
+    transition: 0.2s;
+    &:hover {
+      background: #f5ad50;
+    }
   }
   li {
     padding-bottom: 3rem;
@@ -148,6 +152,7 @@ form {
       outline: none;
       transition: background 450ms ease-in;
       -webkit-appearance: none;
+
       &:focus {
         outline: 5px auto -webkit-focus-ring-color;
       }
@@ -158,6 +163,10 @@ form {
         border-radius: 50%;
         background: #565c60;
         border: 0;
+        transition: 0.2s;
+        &:hover {
+          background: #797c7e;
+        }
       }
       &::-moz-range-thumb {
         -moz-appearance: none;
