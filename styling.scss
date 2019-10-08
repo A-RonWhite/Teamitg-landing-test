@@ -2,8 +2,10 @@ $primary-color: #f99d27;
 $text-color: #565c60;
 $container-padding: 14rem;
 
-body {
+html {
   font-size: 10px;
+}
+body {
   margin: 0;
 }
 
@@ -11,8 +13,7 @@ p,
 li,
 input,
 img,
-h1,
-option {
+h1 {
   /* 13pt coverted to px = 17.3px */
   font-size: 17px;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -26,7 +27,8 @@ li {
 }
 
 label,
-button {
+button,
+option {
   /* 13pt coverted to px = 17.3px */
   font-size: 17px;
   font-family: "Roboto", sans-serif;
@@ -58,9 +60,10 @@ nav {
   h1 {
     position: absolute;
     top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-    width: 100%;
     margin: 0;
   }
 }
@@ -68,6 +71,31 @@ nav {
 form {
   padding: 0 $container-padding;
   padding-bottom: 4rem;
+  datalist {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    option {
+      padding-left: 7px;
+    }
+  }
+  #range-option-value {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+    p {
+      padding-bottom: 6rem;
+      font-family: "Roboto", sans-serif;
+      font-weight: 600;
+      &:nth-of-type(1) {
+        margin-left: -0.5rem;
+      }
+      &:nth-of-type(2) {
+        margin-right: -1rem;
+      }
+    }
+  }
   button {
     padding: 1.6rem 4rem;
     border: none;
@@ -79,6 +107,9 @@ form {
   li {
     padding-bottom: 3rem;
     padding-top: 6rem;
+    &:nth-of-type(1) {
+      padding-top: 0rem;
+    }
   }
   label {
     padding-bottom: 1.5rem;
@@ -112,12 +143,29 @@ form {
         color: #565c60;
       }
     }
-    input[type="range"] {
+    #myinput {
+      background: linear-gradient(
+        to right,
+        #f99d27 0%,
+        #f99d27 50%,
+        #c1b9b1 50%,
+        #c1b9b1 100%
+      );
+
+      border-radius: 8px;
+      height: 11px;
       width: 100%;
-      appearance: none;
+      outline: none;
+      transition: background 450ms ease-in;
+      -webkit-appearance: none;
       &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 27px;
+        height: 27px;
         border-radius: 50%;
         background: #565c60;
+        border: 0;
+        z-index: 10 !important;
       }
     }
   }
@@ -125,9 +173,6 @@ form {
     height: 6rem;
     width: 100%;
     border-radius: 5px;
-  }
-  datalist {
-    padding-bottom: 6rem;
   }
 }
 
@@ -143,125 +188,4 @@ footer {
     width: 100%;
     text-align: left;
   }
-  img {
-  }
 }
-
-datalist {
-  display: flex;
-  /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
-  width: 100%;
-  justify-content: space-between;
-  option {
-    padding-left: 7px;
-  }
-}
-
-#myinput {
-  background: linear-gradient(
-    to right,
-    #82cfd0 0%,
-    #82cfd0 50%,
-    #fff 50%,
-    #fff 100%
-  );
-  border: solid 1px #82cfd0;
-  border-radius: 8px;
-  height: 7px;
-  width: 356px;
-  outline: none;
-  transition: background 450ms ease-in;
-  -webkit-appearance: none;
-}
-
-/* input[type="range"] {
-  height: 1rem;
-  background: #c1b9b1;
-  &:before {
-    content: " ";
-    position: absolute;
-    background: $primary-color;
-    height: 1rem;
-    width: 20rem;
-    z-index: 5;
-  }
-  &::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 27px;
-    height: 27px;
-    background: #c1b9b1;
-    box-shadow: -1rem 1rem 0rem 10rem #f99d27;
-    border: 0;
-    z-index: 10 !important;
-  }
-} */
-
-/* input[type="range"] {
-  margin: auto;
-  -webkit-appearance: none;
-  position: relative;
-  overflow: hidden;
-  height: 11px;
-  width: 200px;
-  cursor: pointer;
-  border-radius: 0;
-}
-
-::-webkit-slider-runnable-track {
-  background: #c1b9b1;
-}
-
-::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 27px; 
-  height: 27px;
-  background: #c1b9b1;
-  box-shadow: -100vw 0 0 100vw #f99d27;
-  border: 0;
-}
-
-::-moz-range-track {
-  height: 11px;
-  background: #c1b9b1;
-}
-
-::-moz-range-thumb {
-  -webkit-appearance: none;
-  width: 27px;
-  height: 27px;
-  background: #fff;
-  box-shadow: -100vw 0 0 100vw #f99d27;
-  border: 0;
-}
-
-::-ms-fill-lower {
-  background: #f99d27;
-}
-
-::-ms-thumb {
-  background: #fff;
-  border: 2px solid #999;
-  height: 40px;
-  width: 20px;
-  box-sizing: border-box;
-}
-
-::-ms-ticks-after {
-  display: none;
-}
-
-::-ms-ticks-before {
-  display: none;
-}
-
-::-ms-track {
-  background: #c1b9b1;
-  color: transparent;
-  height: 11px;
-  border: none;
-}
-
-::-ms-tooltip {
-  display: none;
-}
- */
