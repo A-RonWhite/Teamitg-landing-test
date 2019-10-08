@@ -274,5 +274,8 @@ footer img {
   form {
     padding: 0 2rem 2rem 2rem;
   }
+  form li {
+    font-size: 2.5rem;
+  }
 }
 /*# sourceMappingURL=styling.css.map */
