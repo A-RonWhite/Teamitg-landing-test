@@ -12,14 +12,14 @@ input,
 img,
 h1 {
   /* 13pt coverted to px = 17.3px */
-  font-size: 17px;
+  font-size: 1.7rem;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #565c60;
 }
 
 li {
   /* 28pt coverted to px = 37.3 px */
-  font-size: 37px;
+  font-size: 3.7rem;
   color: #f99d27;
 }
 
@@ -27,7 +27,7 @@ label,
 button,
 option {
   /* 13pt coverted to px = 17.3px */
-  font-size: 17px;
+  font-size: 1.7rem;
   font-family: "Roboto", sans-serif;
   display: block;
   color: #565c60;
@@ -35,7 +35,7 @@ option {
 
 h1 {
   /* 64pt coverted to px = 85.3px */
-  font-size: 85px;
+  font-size: 8.5rem;
   font-weight: 400;
 }
 
@@ -211,11 +211,42 @@ footer {
   padding: 0 14rem;
   padding-top: 6rem;
   padding-bottom: 12.6rem;
+  padding: 6rem 14rem 12.6rem 14rem;
 }
 
 footer p {
   color: #ffffff;
   width: 100%;
   text-align: left;
+}
+
+footer img {
+  height: 100%;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 900px) {
+  footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .header-img {
+    margin: 2rem;
+  }
+  nav img {
+    padding-left: 1rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  form {
+    padding: 0 2rem;
+  }
 }
 /*# sourceMappingURL=styling.css.map */
