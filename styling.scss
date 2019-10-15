@@ -9,6 +9,16 @@ body {
   margin: 0;
 }
 
+.error {
+  display: none;
+  color: white;
+  font-size: 1.7rem;
+  font-family: "Roboto", sans-serif;
+  background: red;
+  margin: 2rem 0;
+  padding: 1rem;
+}
+
 p,
 li,
 input,
@@ -138,7 +148,7 @@ form {
         color: #565c60;
       }
     }
-    #myinput {
+    #q-4 {
       background: linear-gradient(
         to right,
         #f99d27 0%,
@@ -183,6 +193,7 @@ form {
     width: 100%;
     border-radius: 5px;
     border: solid 1px #565c60;
+    padding: 0 2rem;
   }
   #range-numbers {
     display: flex;

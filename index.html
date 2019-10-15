@@ -36,18 +36,21 @@
         <ol>
           <li>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
-            suscipit urna?
+            suscipit urna? <br />
+            <span class="error"
+              >Please select at least one of the options below</span
+            >
           </li>
-          <label>
-            <input type="checkbox" name="option-1" />
+          <label id="questionOne">
+            <input type="checkbox" name="q_1_option_1" class="q-1" id="test" />
             Vivamus eleifend dapibus justo sit amet pharetra.
           </label>
           <label>
-            <input type="checkbox" name="option-2" />
+            <input type="checkbox" name="q_1_option_2" class="q-1" />
             Nullam viverra gravida orci id imperdiet.
           </label>
           <label>
-            <input type="checkbox" name="option-3" />
+            <input type="checkbox" name="q_1_option_3" class="q-1" />
             Cras accumsan elit a est gravida, sit amet malesuada metus
             tristique.
           </label>
@@ -56,34 +59,45 @@
           <li>
             Etiam pharetra sapien in consectetur bibendum. Curabitur sodales
             semper massa?
+            <span class="error"
+              >Please select at least one of the options below</span
+            >
           </li>
-          <label>
-            <input type="input" name="input" id="text-input" />
+          <label id="questionTwo">
+            <input
+              type="input"
+              name="q_2_option_1"
+              id="text-input"
+              class="q-2"
+            />
           </label>
 
           <!-- Third Question -->
           <li>
             Vestibulum mattis urna et iaculis mollis. Nam cursus dictum sapien,
             a venenatis tellus accumsan non.
+            <span class="error"
+              >Please select at least one of the options below</span
+            >
           </li>
-          <label>
-            <input type="checkbox" name="option-1" />
+          <label id="questionThree">
+            <input type="checkbox" name="q_3_option_2" class="q-3" />
             Donec a vehicula arcu.
           </label>
           <label>
-            <input type="checkbox" name="option-2" />
+            <input type="checkbox" name="q_3_option_2" class="q-3" />
             Pellentesque pellentesque nisi justo.
           </label>
           <label>
-            <input type="checkbox" name="option-3" />
+            <input type="checkbox" name="q_3_option_3" class="q-3" />
             In tempor odio ornare ut.
           </label>
           <label>
-            <input type="checkbox" name="option-4" />
+            <input type="checkbox" name="q_3_option_4" class="q-3" />
             Nam ac sem venenatis, vulputate sem eget, varius velit.
           </label>
           <label>
-            <input type="checkbox" name="option-5" />
+            <input type="checkbox" name="q_3_option_5" class="q-3" />
             Aliquam urna sapien, convallis a porta vel, iaculis quis nisl.
           </label>
 
@@ -94,11 +108,12 @@
           <label>
             <input
               type="range"
-              name=""
-              id="myinput"
+              name="q_4_option_1"
+              id="q-4"
               min="0"
               max="10"
               value="5"
+              required
             />
           </label>
           <ul id="range-numbers">
@@ -149,18 +164,5 @@
       <img src="./images/logo_itg_2.png" alt="Team ITG Logo" />
     </footer>
   </body>
-
-  <script>
-    /* Script to change the colour of the slider as you move it */
-    const slider = document.getElementById("myinput");
-    slider.oninput = function() {
-      this.style.background = `linear-gradient(
-    to right,
-    #f99d27 0%,
-    #f99d27 ${this.value * 10}%,
-    #c1b9b1 ${this.value * 10}%,
-    #c1b9b1 100%
-  )`;
-    };
-  </script>
+  <script src="app.js"></script>
 </html>

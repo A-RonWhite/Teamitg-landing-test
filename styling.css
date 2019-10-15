@@ -6,6 +6,16 @@ body {
   margin: 0;
 }
 
+.error {
+  display: none;
+  color: white;
+  font-size: 1.7rem;
+  font-family: "Roboto", sans-serif;
+  background: red;
+  margin: 2rem 0;
+  padding: 1rem;
+}
+
 p,
 li,
 input,
@@ -163,7 +173,7 @@ form label input[type="checkbox"]:checked:after {
   color: #565c60;
 }
 
-form label #myinput {
+form label #q-4 {
   background: -webkit-gradient(linear, left top, right top, from(#f99d27), color-stop(50%, #f99d27), color-stop(50%, #c1b9b1), to(#c1b9b1));
   background: linear-gradient(to right, #f99d27 0%, #f99d27 50%, #c1b9b1 50%, #c1b9b1 100%);
   border-radius: 8px;
@@ -175,11 +185,11 @@ form label #myinput {
   -webkit-appearance: none;
 }
 
-form label #myinput:focus {
+form label #q-4:focus {
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-form label #myinput::-webkit-slider-thumb {
+form label #q-4::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 27px;
   height: 27px;
@@ -190,11 +200,11 @@ form label #myinput::-webkit-slider-thumb {
   transition: 0.2s;
 }
 
-form label #myinput::-webkit-slider-thumb:hover {
+form label #q-4::-webkit-slider-thumb:hover {
   background: #797c7e;
 }
 
-form label #myinput::-moz-range-thumb {
+form label #q-4::-moz-range-thumb {
   -moz-appearance: none;
   width: 27px;
   height: 27px;
@@ -208,6 +218,7 @@ form #text-input {
   width: 100%;
   border-radius: 5px;
   border: solid 1px #565c60;
+  padding: 0 2rem;
 }
 
 form #range-numbers {
