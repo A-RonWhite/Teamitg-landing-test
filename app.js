@@ -10,7 +10,6 @@ slider.oninput = function() {
   )`;
 };
 
-/* Form Validation */
 /* DOM selection */
 const questionOne = document.querySelectorAll('.q-1');
 const questionTwo = document.querySelector('.q-2');
@@ -19,6 +18,7 @@ const questionFour = document.querySelectorAll('#q-4');
 const form = document.querySelector('form');
 const error = document.querySelectorAll('.error');
 
+/* Form Validation */
 const valAlert = (errorNum, questionNum) => {
   error[errorNum].style.display = 'block';
   setTimeout(function() {
